@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".problem">
+
+    <Button
+        android:id="@+id/button_mean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFEEEE"
+        android:text="Mean"
+        android:textColor="#3A0A0A"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_median"
+        app:layout_constraintEnd_toEndOf="@+id/num_entry"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/num_entry" />
+
+    <Button
+        android:id="@+id/button_median"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="#FFEEEE"
+        android:text="Median"
+        android:textColor="#3A0A0A"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_mode"
+        app:layout_constraintEnd_toEndOf="@+id/button_mean"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button_mean" />
+
+    <Button
+        android:id="@+id/button_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:backgroundTint="#FFEEEE"
+        android:text="Mode"
+        android:clickable="true"
+        android:textColor="#3A0A0A"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/number_result"
+        app:layout_constraintEnd_toEndOf="@+id/button_median"
+        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintStart_toStartOf="@+id/button_median" />
+
+    <EditText
+        android:id="@+id/num_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="#FAF0F0"
+        android:ems="10"
+        android:foregroundTint="#E4D1D1"
+        android:hint="enter the given number"
+        android:inputType=""
+        android:textColor="#DCD9D9"
+        android:textColorHint="#ECE6E6"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_mean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <TextView
+        android:id="@+id/number_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="96dp"
+        android:text="TextView"
+        android:textColor="#EAD2D2"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button_mode"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/button_mode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
