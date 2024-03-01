@@ -4,17 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/math_background"
     tools:context=".problem">
 
     <Button
         android:id="@+id/button_median"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="124dp"
-        android:backgroundTint="#FFEEEE"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="176dp"
+        android:backgroundTint="#ECA7EB"
         android:text="Median"
-        android:textColor="#3A0A0A"
+        android:textColor="#4213AF"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_mode" />
@@ -23,56 +24,56 @@
         android:id="@+id/button_mean"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFEEEE"
+        android:backgroundTint="#ECA7EB"
         android:text="Mean"
-        android:textColor="#3A0A0A"
+        android:textColor="#4213AF"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_median"
         app:layout_constraintEnd_toStartOf="@+id/button_median"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/num_entry" />
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_mode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFEEEE"
+        android:layout_marginEnd="52dp"
+        android:backgroundTint="#ECA7EB"
         android:clickable="true"
         android:text="Mode"
-        android:textColor="#3A0A0A"
+        android:textColor="#4213AF"
         android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="@+id/button_median"
-        app:layout_constraintEnd_toEndOf="@+id/num_entry" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/num_entry"
-        android:layout_width="311dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="88dp"
+        android:layout_width="279dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="100dp"
         android:backgroundTint="#9E1616"
         android:ems="10"
         android:foregroundTint="#E4D1D1"
         android:hint="Enter the given number"
-        android:inputType=""
         android:textColor="#DCD9D9"
         android:textColorHint="@color/black"
-        android:textSize="25sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/button_median"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
-        android:layout_width="310dp"
-        android:layout_height="74dp"
+        android:id="@+id/linearLayout2"
+        android:layout_width="298dp"
+        android:layout_height="69dp"
         android:background="@drawable/border_background"
         android:orientation="vertical"
         android:padding="8dp"
         app:layout_constraintBottom_toTopOf="@+id/num_entry"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
         app:layout_constraintHorizontal_bias="0.486"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.626">
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -88,7 +89,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="Data Sets"
-                    android:textColor="#EAD2D2"
+                    android:textColor="#DA3C3C"
                     android:textColorHint="#F1DCDC"
                     android:textSize="20sp" />
 
@@ -98,17 +99,26 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="368dp"
-        android:layout_height="232dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="300dp"
+        android:layout_height="191dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/main_border"
+        android:gravity="center|top"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
+        <TextView
+            android:id="@+id/changeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text=""
+            android:textColor="@color/purple_200"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
